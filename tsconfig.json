@@ -2,7 +2,8 @@
     "compilerOptions": {
         "outDir": "./dist",
         "strict": true,
-        "noEmitOnError": false
+        "noEmitOnError": false,
+        "target": "ES6"
     },
     "files": ["src/app.ts"]
 }

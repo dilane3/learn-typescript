@@ -7,10 +7,19 @@ function increment(e: MouseEvent): void {
     count += 1
 
     if (btnElement instanceof HTMLButtonElement) {
-        const span = <HTMLSpanElement>btnElement.querySelector("span")
+        const span = btnElement.querySelector("span")
 
-        span.innerText = count.toString()
+        if (span)
+            span.innerText = count.toString()
     }
 }
 
 btnElement.addEventListener("click", increment)
+
+function consoleSize<Type extends {length: number}>(arg: Type): Type {
+    console.log(arg.length)
+
+    return arg
+}
+
+const id: Array<number | string> = ["19M2069", 10093]
